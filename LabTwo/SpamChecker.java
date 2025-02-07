@@ -37,7 +37,7 @@ public class SpamChecker {
             if (isSpammer(arg)) {
                 System.out.println(arg + " is a known spam");
             } else {
-                System.out.println(arg + " is not spam");
+                System.out.println(arg + " is legitimate site");
             }
         }
     }
