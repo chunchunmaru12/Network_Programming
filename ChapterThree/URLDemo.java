@@ -31,6 +31,8 @@ public class URLDemo {
         try {
             URL u = new URL(baseUrl);
             URL u2 = new URL(u, relativeUrl);
+            //third way
+            URL u3 = new URL("http","facebook.com",8000,"/index.html");
             print(u2);
         } catch (Exception e) {
             System.out.println("An error occurred: " + e.getMessage());
