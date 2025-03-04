@@ -32,8 +32,10 @@ public class QueryString {
     }
 
     public static void main(String[] args) {
-        QueryString qs = new QueryString("header one", "value one");
-        qs.add("header two", "value two");
+        QueryString qs = new QueryString("name", "Md Noorullah khan");
+        qs.add("city", "Dhob
+        cdighat");
         System.out.println(qs);
+
     }
 }

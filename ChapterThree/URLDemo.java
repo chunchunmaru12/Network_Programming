@@ -44,8 +44,6 @@ public class URLDemo {
         System.out.println();
         showDemo("https://mail.google.com/mail/u/0/#inbox?compose=new");
         System.out.println();
-        printUrlMatches("http://www.google.com:8080?key=value#21", "http://www.google.com:8080?key=value#21");
-        System.out.println();
         createUrl("https://www.example.com/", "index.html");
     }
 }

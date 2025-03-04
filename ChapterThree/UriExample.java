@@ -4,10 +4,9 @@ import java.net.URISyntaxException;
 public class UriExample {
     public static void main(String[] args) {
         try{
-            URI voice = new URI("tel:+1-800-555-1212");
+            URI voice = new URI("tel:+1-111-222-3333");
             URI web = new URI("https://xml.com/pub/a/2003/09/17/stax.html#id=_hbc");
-            URI tutorial = new URI("urn:oasis:names:specification:docbook:dtd:xml:4.1.2");
-            URI isbn = new URI("isbn:8956231025");
+            URI isbn = new URI("isbn:9851121052");
             System.out.println("isbn "+isbn);
             
             URI iso = new URI("iso:9001/2000");
