@@ -32,8 +32,8 @@ public class QueryString {
     }
 
     public static void main(String[] args) {
-        QueryString qs = new QueryString("name", "Md Noorullah khan");
-        qs.add("city", "Dhobighat");
+        QueryString qs = new QueryString("ke1", "vale1");
+        qs.add("ke2", "vale2");
         System.out.println(qs);
 
     }
