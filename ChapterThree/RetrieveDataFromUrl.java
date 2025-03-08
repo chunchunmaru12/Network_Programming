@@ -4,7 +4,7 @@ import java.io.*;
 public class RetrieveDataFromUrl {
     public static void main(String[] args) {
         try {
-            URL url = new URL("https://www.exaple.com/");
+            URL url = new URL("https://www.google.com/");
             // InputSteam in = url.openStream();
             URLConnection urlConnection = url.openConnection();
             InputStream inputStream = urlConnection.getInputStream();

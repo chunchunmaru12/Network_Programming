@@ -5,15 +5,15 @@ public class UriExample {
     public static void main(String[] args) {
         try{
             URI voice = new URI("tel:+1-111-222-3333");
-            URI web = new URI("https://example.com/sta.html#id=abc");
-            URI isbn = new URI("isbn:1122334455");
+            URI web = new URI("https://xml.com/pub/a/2003/09/17/stax.html#id=_hbc");
+            URI isbn = new URI("isbn:9851121052");
             System.out.println("isbn "+isbn);
             
-            URI iso = new URI("iso:0098/4321");
+            URI iso = new URI("iso:9001/2000");
             System.out.println(iso);
             System.out.println(iso.getScheme());
-            URI absolute = new URI("http", "//www.example", null);
-            URI relative = new URI(null, "//example/index.shtml", "today");
+            URI absolute = new URI("http", "//www.ibiblio.org", null);
+            URI relative = new URI(null, "//javafag/index.shtml", "today");
             System.out.println("Voice URI: " + voice);
             System.out.println("Web URI: " + web);
             System.out.println("Absolute URI: " + absolute);

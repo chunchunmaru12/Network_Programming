@@ -40,9 +40,9 @@ public class URLDemo {
 
     } 
     public static void main(String[] args) {
-        showDemo("http://www.example.com:8080?key=value#5");
+        showDemo("http://www.google.com:8080?key=value#21");
         System.out.println();
-        showDemo("https://mail.example.com/mail/u/1/#inbox?compose=new");
+        showDemo("https://mail.google.com/mail/u/0/#inbox?compose=new");
         System.out.println();
         createUrl("https://www.example.com/", "index.html");
     }
