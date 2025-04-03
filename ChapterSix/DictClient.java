@@ -1,10 +1,13 @@
+
 // network based English to Latin translator
 import java.io.*;
 import java.net.*;
+
 public class DictClient {
     public static final String SERVER = "dict.org";
     public static final int PORT = 2628;
     public static final int TIMEOUT = 15000;
+
     public static void main(String[] args) {
         Socket socket = null;
         try {
@@ -32,6 +35,7 @@ public class DictClient {
             }
         }
     }
+
     static void define(String word, Writer writer, BufferedReader reader) throws IOException {
         writer.write("DEFINE fd-eng-lat " + word + "\r\n");
         writer.flush();
@@ -48,5 +52,5 @@ public class DictClient {
             }
         }
     }
-    
+
 }
