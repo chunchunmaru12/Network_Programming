@@ -5,7 +5,7 @@ import java.io.*;
 public class HttpURLMethods {
     public static void main(String[] args) {
         try {
-            URL url = new URL("https://www.google.com");
+            URL url = new URL("https://run.mocky.io/v3/0b863e9e-dce2-4a75-8a06-97e0eacf21ee");
             HttpURLConnection huc = (HttpURLConnection) url.openConnection();
 
             // Sending a request

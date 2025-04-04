@@ -28,11 +28,11 @@ public class IPAddressVersionChecker {
 
             // Determine and print the IP version for IPv6 address
             int res6 = getVersion(ia6);
-            System.out.println("IP version: v" + res6);
+            System.out.println(ia6+"IP version: v" + res6);
 
             // Determine and print the IP version for IPv4 address
             int res4 = getVersion(ia4);
-            System.out.println("IP version: v" + res4);
+            System.out.println(ia4+"IP version: v" + res4);
 
         } catch (UnknownHostException e) {
             System.out.println("Error: " + e.getMessage());

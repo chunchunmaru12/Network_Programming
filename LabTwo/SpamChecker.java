@@ -2,14 +2,8 @@ package LabTwo;
 import java.net.*;
 
 public class SpamChecker {
-    // Blackhole list domain used to check for spammer IPs
     public static final String BLACKHOLE = "spamhaus.org/sbl";
     
-    /**
-     * Checks if the given IP address or hostname is listed in the spam blacklist.
-     * @param arg The IP address or hostname to check.
-     * @return true if the IP is listed as a spammer, false otherwise.
-     */
     private static boolean isSpammer(String arg) {
         try {
             // Convert hostname or IP address to an InetAddress object
@@ -39,6 +33,7 @@ public class SpamChecker {
             } else {
                 System.out.println(arg + " is legitimate site");
             }
+            
         }
-    }
+     }
 }

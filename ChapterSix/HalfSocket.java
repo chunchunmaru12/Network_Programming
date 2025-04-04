@@ -7,7 +7,7 @@ public class HalfSocket {
             // Send HTTP request
             Writer out = new OutputStreamWriter(connection.getOutputStream(), "ISO-8859-1");
             out.write("GET / HTTP/1.0\r\n");
-            out.write("Host: www.google.com\r\n");
+            out.write("Host: www.neverssl.com\r\n");
             out.write("\r\n"); // Blank line to end headers
             out.flush();
 

@@ -35,11 +35,11 @@ public class JavaInternetAddressByName {
    // }
 
    public static void main(String[] args) {
-      String facebook = "www.facebook.com";
+      String youtube = "www.youtube.com";
+      String chat = "www.chatgpt.com";
       String localhost = "localhost";
-      String google = "www.google.com";
-      PrintIPAddress(google);
-      PrintIPAddress(facebook);
+      PrintIPAddress(chat);
+      PrintIPAddress(youtube);
       PrintIPAddress(localhost);
      // PrintHost("163.70.143.35");
    }

@@ -6,7 +6,7 @@ import java.util.Date;
 public class URLConnectionDemo {
     public static void main(String[] args) throws Exception {
         int c;
-        URL hp = new URL("https://run.mocky.io/v3/b62d0e5b-f7e4-4286-b761-38eeac08eb03");
+        URL hp = new URL("https://run.mocky.io/v3/0b863e9e-dce2-4a75-8a06-97e0eacf21ee");
         URLConnection hpCon = hp.openConnection();
         //get date
         long d = hpCon.getDate();
