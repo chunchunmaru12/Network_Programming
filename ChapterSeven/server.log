@@ -1,0 +1,6 @@
+Apr 05, 2025 8:16:06 AM ChapterSeven.ServerLoggerExample main
+INFO: Server is starting...
+Apr 05, 2025 8:16:06 AM ChapterSeven.ServerLoggerExample main
+WARNING: Client tried to access a restricted resource.
+Apr 05, 2025 8:16:06 AM ChapterSeven.ServerLoggerExample main
+SEVERE: Server encountered an unexpected error!
