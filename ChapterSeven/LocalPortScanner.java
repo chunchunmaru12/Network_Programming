@@ -4,18 +4,16 @@ import java.net.*;
 
 public class LocalPortScanner {
     public static void main(String[] args) {
-        for (int port = 1; port <= 6000; port++) {
+        for (int port = 1; port <= 65535; port++) {
             try {
-                // Attempt to connect to the port
-                ServerSocket socket = new ServerSocket(port);
-                socket.close(); // Close the socket immediately if it was opened successfully
-            } catch (java.net.ConnectException e) {
-                // Port is closed or not reachable
+                ServerSocket serverSocket = new ServerSocket();
+                serverSocket.bind(new InetSocketAddress("localhost", port));
+
+                serverSocket.close(); // Successfully bound, means port is free (not in use)
             } catch (java.io.IOException e) {
-                // Port is closed or not reachable
+                // If binding fails, that means the port is already in use (open)
                 System.out.println("Port " + port + " is open.");
             }
         }
     }
-
 }
