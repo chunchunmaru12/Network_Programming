@@ -8,6 +8,7 @@ public class PacketReceiveDemo {
             DatagramSocket socket = new DatagramSocket(1022);
             System.out.println("Bound to local port" + socket.getLocalPort());
             DatagramPacket packet = new DatagramPacket(new byte[256], 256);
+            socket.setSoTimeout(5000);
             socket.receive(packet);
             System.out.println("Packet Received!!");
             InetAddress remote_addr = packet.getAddress();
