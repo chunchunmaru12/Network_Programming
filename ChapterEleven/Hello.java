@@ -3,7 +3,7 @@ package ChapterEleven;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-// Remote Interface
+// Remote interface
 public interface Hello extends Remote {
     void printMsg() throws RemoteException;
 }

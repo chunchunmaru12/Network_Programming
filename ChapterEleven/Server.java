@@ -2,7 +2,6 @@ package ChapterEleven;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.UnicastRemoteObject;
 
 public class Server {
     public static void main(String[] args) {
@@ -10,12 +9,9 @@ public class Server {
             // Instantiate the implementation class
             HelloImpl obj = new HelloImpl();
 
-            // Export the remote object
-            Hello stub = (Hello) UnicastRemoteObject.exportObject(obj, 0);
-
-            // Bind the remote object's stub in the registry
-            Registry registry = LocateRegistry.createRegistry(1099);
-            registry.bind("Hello", stub);
+            // No need to export again manually
+            Registry registry = LocateRegistry.createRegistry(1099); // Start internal registry
+            registry.bind("Hello", obj); 
 
             System.out.println("Server ready");
         } catch (Exception e) {

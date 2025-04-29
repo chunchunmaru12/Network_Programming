@@ -3,7 +3,7 @@ package ChapterEleven;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-// Implementation of the remote interface
+// Remote object implementation
 public class HelloImpl extends UnicastRemoteObject implements Hello {
 
     protected HelloImpl() throws RemoteException {
