@@ -1,0 +1,5 @@
+keytool -genkeypair -alias mykey -keyalg RSA -keysize 2048 -validity 365 -keystore serverkeystore.jks -storepass 2andnotafrod -keypass 2andnotafrod -dname "CN=localhost"
+
+keytool -exportcert -alias mykey -keystore serverkeystore.jks -file servercert.cer -storepass 2andnotafrod
+
+keytool -importcert -alias mykey -file servercert.cer -keystore clienttruststore.jks -storepass 2andnotafrod -noprompt

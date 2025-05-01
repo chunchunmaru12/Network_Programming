@@ -5,27 +5,26 @@ import java.security.KeyStore;
 public class SecureOrderClient {
 
     public static void main(String[] args) {
-        String host = "localhost"; // or IP of the server
+        String host = "localhost";
         int port = 7000;
 
         try {
-            // Load the truststore (to trust the server's certificate)
-            KeyStore ts = KeyStore.getInstance("JKS");
-            char[] password = "2andnotafrod".toCharArray(); // same password used in keystore
-            ts.load(new FileInputStream("jnpe219.keys"), password); // same file if it's self-signed
+            // Load truststore to trust the server's certificate
+            KeyStore trustStore = KeyStore.getInstance("JKS");
+            char[] password = "2andnotafrod".toCharArray();
+            trustStore.load(new FileInputStream("clienttruststore.jks"), password);
 
             TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
-            tmf.init(ts);
+            tmf.init(trustStore);
 
-            SSLContext context = SSLContext.getInstance("SSL");
+            SSLContext context = SSLContext.getInstance("TLS");
             context.init(null, tmf.getTrustManagers(), null);
 
             SSLSocketFactory factory = context.getSocketFactory();
             SSLSocket socket = (SSLSocket) factory.createSocket(host, port);
 
-            System.out.println("Connected securely to server!");
+            System.out.println("Connected securely to server.");
 
-            // Send a sample order
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
 
